@@ -11,7 +11,12 @@ export default function Home() {
         className="object-contain"
       />
 
-      <h1 className="text-6xl font-bold mt-8 text-white">Coming Soon !!!</h1>
+      <h1
+        title="Wait For Best Packages..."
+        className="text-6xl font-bold mt-8 text-white"
+      >
+        Coming Soon !!!
+      </h1>
     </div>
   );
 }
