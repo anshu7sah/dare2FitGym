@@ -10,10 +10,10 @@ interface TransitionButtonProps {
 
 const TransitionButton: React.FC<TransitionButtonProps> = ({
   name,
-  color,
-  textColor,
-  transitionColor,
-  hoverTextColor,
+  //   color,
+  //   textColor,
+  //   transitionColor,
+  //   hoverTextColor,
 }) => {
   return (
     <button
