@@ -1,5 +1,3 @@
-import Image from "next/image";
-import logo from "/public/logos/logo.png";
 import HeroSection from "@/components/heroSection/HeroSection";
 export default function Home() {
   return (
