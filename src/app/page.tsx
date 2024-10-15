@@ -1,4 +1,5 @@
 import HeroSection from "@/components/heroSection/HeroSection";
+import SwiperComp from "@/components/swiper/SwiperComp";
 export default function Home() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function Home() {
         </h1>
       </div> */}
       <HeroSection />
+      <SwiperComp />
     </div>
   );
 }
