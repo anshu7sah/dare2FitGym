@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import CardioStrengthIcon from "../svg/CardioStrengthIcon";
 import MuscleGain from "../svg/MuscleGain";
 import FatLost from "../svg/FatLost";

@@ -27,17 +27,14 @@ const Card: React.FC<CardProps> = ({
         className="w-[17rem] px-7 py-10 rounded-xl text-white transition-all duration-300 ease-in-out transform hover:scale-105"
         style={{
           backgroundColor: hoverBackgroundColor,
-          boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.25)", // Soft shadow for better depth
+          boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.25)",
           cursor: "pointer",
         }}
       >
-        {/* SVG Section */}
         <div className="mb-4">
           <SvgIcon fill={svgFill} />
         </div>
-        {/* Title */}
         <h3 className="text-lg font-semibold mb-2 text-left">{title}</h3>
-        {/* Description */}
         <p className="text-sm text-gray-300 text-left">{description}</p>
       </div>
     </div>
