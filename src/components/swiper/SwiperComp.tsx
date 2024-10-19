@@ -102,7 +102,7 @@ const cardData = [
 
 const SwiperComp = () => {
   return (
-    <div className="py-10 bg-black relative overflow-hidden">
+    <div className="sm:pt-10 pb-10 bg-black relative overflow-hidden">
       <div
         className="absolute top-0 left-1/2 transform -translate-x-[100%] -translate-y-[10%] text-white opacity-10 font-bold tracking-wide z-0 pointer-events-none
         text-[5rem] md:text-[7rem] lg:text-[10rem] xl:text-[12rem]"

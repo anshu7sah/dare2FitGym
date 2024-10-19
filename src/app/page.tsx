@@ -1,4 +1,5 @@
 import HeroSection from "@/components/heroSection/HeroSection";
+import PhysicsTransform from "@/components/physicsTransform/PhysicsTransform";
 import SwiperComp from "@/components/swiper/SwiperComp";
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </div> */}
       <HeroSection />
       <SwiperComp />
+      <PhysicsTransform />
     </div>
   );
 }
