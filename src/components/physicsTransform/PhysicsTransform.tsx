@@ -22,9 +22,8 @@ export default function PhysicsTransform() {
               <Image
                 src={transform1}
                 alt="Image 1"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
@@ -34,9 +33,8 @@ export default function PhysicsTransform() {
               <Image
                 src={transform2}
                 alt="Image 2"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
@@ -46,9 +44,8 @@ export default function PhysicsTransform() {
               <Image
                 src={transform3}
                 alt="Image 3"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
               />
             </div>
           </div>

@@ -2,7 +2,7 @@
 import React, { ReactNode, useState } from "react";
 
 interface CardProps {
-  svg: (props: any) => ReactNode;
+  svg: (props: React.SVGProps<SVGSVGElement>) => ReactNode;
   background: string;
   title: string;
   description: string;

@@ -13,86 +13,93 @@ import FatLost from "../svg/FatLost";
 import Nutritions from "../svg/Nutritions";
 import Card from "./Card";
 
-const cardData = [
+interface CardData {
+  svg: (props: React.SVGProps<SVGSVGElement>) => React.ReactNode;
+  background: string;
+  title: string;
+  description: string;
+}
+
+const cardData: CardData[] = [
   {
-    svg: (props: any) => <CardioStrengthIcon {...props} />,
+    svg: (props) => <CardioStrengthIcon {...props} />,
     background: "#1b1b1b",
     title: "Cardio Strength",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <FatLost {...props} />,
+    svg: (props) => <FatLost {...props} />,
     background: "#1b1b1b",
     title: "Fat Lose",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <MuscleGain {...props} />,
+    svg: (props) => <MuscleGain {...props} />,
     background: "#1b1b1b",
     title: "Muscle Gain",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <Nutritions {...props} />,
+    svg: (props) => <Nutritions {...props} />,
     background: "#1b1b1b",
     title: "Nutrition",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <Nutritions {...props} />,
+    svg: (props) => <Nutritions {...props} />,
     background: "#1b1b1b",
     title: "Nutrition",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <Nutritions {...props} />,
+    svg: (props) => <Nutritions {...props} />,
     background: "#1b1b1b",
     title: "Nutrition",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
   {
-    svg: (props: any) => <Nutritions {...props} />,
+    svg: (props) => <Nutritions {...props} />,
     background: "#1b1b1b",
     title: "Nutrition",
     description:
