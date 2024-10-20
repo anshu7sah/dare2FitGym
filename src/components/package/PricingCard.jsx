@@ -16,7 +16,6 @@ const PricingCard = ({ data: { name, price, features, bestOffer } }) => {
         </div>
       )}
 
-      {/* Package Title */}
       <h3
         className={`text-lg font-semibold mb-4 ${
           !bestOffer && "text-blue-500"
@@ -33,7 +32,7 @@ const PricingCard = ({ data: { name, price, features, bestOffer } }) => {
 
       <ul className="mt-4 space-y-5 mb-10">
         {features.map((feature, index) => (
-          <li className="flex items-center gap-4 font-semibold" key={feature}>
+          <li className="flex items-center gap-4 font-semibold" key={index}>
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white flex items-center justify-center rounded-full">
               <TiTick size={20} fill={bestOffer ? "#2196F3" : "#1b1b1b"} />
             </div>

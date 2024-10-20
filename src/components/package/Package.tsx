@@ -120,7 +120,7 @@ const Package = () => {
   );
 
   const bestOfferIndex = packageData.findIndex((item) => item.bestOffer);
-  let reorderedData = [...packageData];
+  const reorderedData = [...packageData];
   if (bestOfferIndex !== 1) {
     if (bestOfferIndex > -1) {
       const [bestOfferPackage] = reorderedData.splice(bestOfferIndex, 1);
