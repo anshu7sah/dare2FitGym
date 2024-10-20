@@ -5,7 +5,7 @@ const PricingCard = ({ data: { name, price, features, bestOffer } }) => {
   return (
     <div
       className={`max-w-[19rem] mx-auto ${
-        bestOffer ? "bg-blue-500" : " bg-[#1b1b1b]"
+        bestOffer ? "bg-blue-500 scale-110 my-3" : " bg-[#1b1b1b]"
       }  text-white rounded-2xl overflow-hidden shadow-lg relative p-8`}
     >
       {bestOffer && (
