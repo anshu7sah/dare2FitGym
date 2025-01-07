@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/logos/logo2.png";
+import name from "/public/logos/gymName.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,11 @@ const Navbar = () => {
       <nav className="container mx-auto p-4 flex justify-between items-center h-full">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center gap-2">
             <Image width={70} height={70} src={logo} alt="Logo" />
+            <div className="relative translate-y-5">
+              <Image width={100} height={100} src={name} alt="gymName" />
+            </div>
           </div>
         </div>
 

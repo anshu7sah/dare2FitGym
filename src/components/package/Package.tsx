@@ -143,9 +143,9 @@ const Package = () => {
         </h2>
 
         {/* Toggle Switch */}
-        <div className="flex items-center space-x-3 mb-6 bg-white rounded-xl p-2">
+        <div className="flex items-center space-x-3 mb-6 bg-white rounded-xl p-2 flex-col gap-2 sm:flex-row">
           <Button
-            className={`text-sm sm:text-base p-7  hover:bg-yellow-200 hover:text-sky-950  font-bold ${
+            className={`text-sm sm:text-base p-7 hover:bg-yellow-200 hover:text-sky-950 font-bold w-full sm:w-auto ${
               billingCycle === "regular"
                 ? "bg-yellow-400 text-sky-950"
                 : "bg-transparent text-[#999]"
@@ -158,7 +158,7 @@ const Package = () => {
             Regular Time (5AM - 9PM)
           </Button>
           <Button
-            className={`text-sm sm:text-base p-7 hover:bg-yellow-200 hover:text-sky-950 font-semibold ${
+            className={`text-sm sm:text-base p-7 hover:bg-yellow-200 hover:text-sky-950 font-semibold w-full sm:w-auto ${
               billingCycle === "mid"
                 ? "bg-yellow-400 text-sky-950"
                 : "bg-transparent text-[#999]"
