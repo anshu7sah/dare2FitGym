@@ -3,120 +3,124 @@ import React, { useState } from "react";
 import PricingCard from "./PricingCard";
 import { Button } from "../ui/button";
 
-const monthlyData = [
+const regularData = [
   {
-    name: "Basic Package",
-    price: "1000",
+    name: "Monthly Package",
+    price: "2000",
     features: [
       "Unlimited Gym Access",
-      "2x Fitness Consultant",
-      "Nutrition Tracking",
-      "1x Free Suplement",
-      "3 Days per week",
-      "Personal Trainer",
+      "Fitness Consultant",
+      "Personal trainer as per requirement (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: false,
   },
 
   {
-    name: "Pro Package",
-    price: "3000",
+    name: "3 Months Package",
+    price: "5000",
     features: [
       "Unlimited Gym Access",
-      "7x Fitness Consultant",
-      "Nutrition Tracking",
-      "5x Free Suplement",
-      "Gym Card",
-      "Personal Trainer",
-    ],
-    bestOffer: false,
-  },
-  {
-    name: "Mid Package",
-    price: "2000",
-    features: [
-      "Unlimited Gym Access",
-      "4x Fitness Consultant",
-      "Nutrition Tracking",
-      "3x Free Suplement",
-      "5 Days per week",
-      "Personal Trainer",
+      "1x freeze membership",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: true,
   },
   {
-    name: "Athlete Package",
-    price: "5000",
+    name: "Six Months Package",
+    price: "8500",
     features: [
       "Unlimited Gym Access",
-      "Free Clothes",
-      "All Training Program",
-      "Free Fitness Consultant",
-      "Free Suplement",
-      "Gym Card",
+      "2x freeze membership",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
+    ],
+    bestOffer: false,
+  },
+  {
+    name: "Yearly Package",
+    price: "15000",
+    features: [
+      "Unlimited Gym Access",
+      "4x freeze membership",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: false,
   },
 ];
-const yearlyData = [
+const midTimeData = [
   {
-    name: "Basic Package",
-    price: "11000",
+    name: "Monthly Package",
+    price: "1500",
     features: [
       "Unlimited Gym Access",
-      "2x Fitness Consultant",
-      "Nutrition Tracking",
-      "1x Free Suplement",
-      "3 Days per week",
-      "Personal Trainer",
+      "Fitness Consultant",
+      "Personal trainer as per requirement (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: false,
   },
+
   {
-    name: "Mid Package",
-    price: "20000",
+    name: "3 Months Package",
+    price: "4000",
     features: [
       "Unlimited Gym Access",
-      "4x Fitness Consultant",
-      "Nutrition Tracking",
-      "3x Free Suplement",
-      "5 Days per week",
-      "Personal Trainer",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: true,
   },
   {
-    name: "Pro Package",
-    price: "28000",
+    name: "Six Months Package",
+    price: "7000",
     features: [
       "Unlimited Gym Access",
-      "7x Fitness Consultant",
-      "Nutrition Tracking",
-      "5x Free Suplement",
-      "Gym Card",
-      "Personal Trainer",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: false,
   },
   {
-    name: "Athlete Package",
-    price: "45000",
+    name: "Yearly Package",
+    price: "12000",
     features: [
       "Unlimited Gym Access",
-      "Free Clothes",
-      "All Training Program",
-      "Free Fitness Consultant",
-      "Free Suplement",
-      "Gym Card",
+      "Fitness Consultant",
+      "Personal trainer available (Payable)",
+      "Free Suplement Consultant",
+      "7 Days per week",
+      "Group Training under experienced Triner",
     ],
     bestOffer: false,
   },
 ];
 
 const Package = () => {
-  const [billingCycle, setBillingCycle] = useState("monthly");
+  const [billingCycle, setBillingCycle] = useState("regular");
   const [packageData, setPackageData] = useState(
-    billingCycle === "monthly" ? monthlyData : yearlyData
+    billingCycle === "regular" ? regularData : midTimeData
   );
 
   const bestOfferIndex = packageData.findIndex((item) => item.bestOffer);
@@ -141,30 +145,30 @@ const Package = () => {
         {/* Toggle Switch */}
         <div className="flex items-center space-x-3 mb-6 bg-white rounded-xl p-2">
           <Button
-            className={`text-sm sm:text-base p-7  font-semibold ${
-              billingCycle === "monthly"
-                ? "bg-black text-[#ddd]"
+            className={`text-sm sm:text-base p-7  hover:bg-yellow-200 hover:text-sky-950  font-bold ${
+              billingCycle === "regular"
+                ? "bg-yellow-400 text-sky-950"
                 : "bg-transparent text-[#999]"
             }`}
             onClick={() => {
-              setBillingCycle("monthly");
-              setPackageData([...monthlyData]);
+              setBillingCycle("regular");
+              setPackageData([...regularData]);
             }}
           >
-            Billed Monthly
+            Regular Time (5AM - 9PM)
           </Button>
           <Button
-            className={`text-sm sm:text-base p-7   font-semibold ${
-              billingCycle === "yearly"
-                ? "bg-black text-[#ddd]"
+            className={`text-sm sm:text-base p-7 hover:bg-yellow-200 hover:text-sky-950 font-semibold ${
+              billingCycle === "mid"
+                ? "bg-yellow-400 text-sky-950"
                 : "bg-transparent text-[#999]"
             }`}
             onClick={() => {
-              setBillingCycle("yearly");
-              setPackageData([...yearlyData]);
+              setBillingCycle("mid");
+              setPackageData([...midTimeData]);
             }}
           >
-            Billed Yearly
+            Mid Time (10AM - 4PM)
           </Button>
         </div>
 
