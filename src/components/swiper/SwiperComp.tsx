@@ -106,6 +106,58 @@ const cardData: CardData[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.",
   },
 ];
+// const cardDataTemp: CardData[] = [
+//   {
+//     svg: (props) => <PersonalTraining {...props} />,
+//     background: "#282828",
+//     title: "Personal Training",
+//     description:
+//       "Get one-on-one coaching tailored to your fitness goals, with expert guidance and personalized workout plans.",
+//   },
+//   {
+//     svg: (props) => <GroupClasses {...props} />,
+//     background: "#333333",
+//     title: "Group Classes",
+//     description:
+//       "Join a variety of group classes, from zumba to high-intensity interval training, designed for all fitness levels.",
+//   },
+//   {
+//     svg: (props) => <VirtualWorkouts {...props} />,
+//     background: "#3d3d3d",
+//     title: "Virtual Workouts",
+//     description:
+//       "Access live-streamed and on-demand workouts, bringing fitness to the comfort of your home.",
+//   },
+//   {
+//     svg: (props) => <Recovery {...props} />,
+//     background: "#464646",
+//     title: "Wellness and Recovery",
+//     description:
+//       "Relax and rejuvenate with wellness services such as massage therapy, saunas, and cryotherapy.",
+//   },
+//   {
+//     svg: (props) => <AquaticFitness {...props} />,
+//     background: "#505050",
+//     title: "Aquatic Fitness",
+//     description:
+//       "Engage in low-impact swimming and aquatic fitness classes, perfect for cardiovascular health and joint mobility.",
+//   },
+//   {
+//     svg: (props) => <ChildCare {...props} />,
+//     background: "#5a5a5a",
+//     title: "Childcare Services",
+//     description:
+//       "Work out stress-free with supervised play areas designed to keep your children entertained and safe.",
+//   },
+
+//   {
+//     svg: (props) => <MembershipPerks {...props} />,
+//     background: "#6e6e6e",
+//     title: "Membership Perks",
+//     description:
+//       "Enjoy exclusive perks like guest passes, discounts, and access to member-only events and challenges.",
+//   },
+// ];
 
 const SwiperComp = () => {
   return (
