@@ -8,7 +8,7 @@ const app = new Hono()
   })
 
   .post("/register", zValidator("json", registerSchema), async (c) => {
-    //@typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { name, email, password } = c.req.valid("json");
   });
 
