@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
-import { loginSchema, registerSchema } from "../schemas";
+import { registerSchema } from "../schemas";
 
 const app = new Hono()
   .get("/current", (c) => {
@@ -8,6 +8,7 @@ const app = new Hono()
   })
 
   .post("/register", zValidator("json", registerSchema), async (c) => {
+    //@typescript-eslint/no-unused-vars
     const { name, email, password } = c.req.valid("json");
   });
 
