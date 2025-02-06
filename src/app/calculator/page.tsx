@@ -157,7 +157,7 @@ export default function CalorieCalculator() {
           Calculate
         </button>
         <button
-          className="w-1/2 mt-4 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
+          className="w-1/2 mt-4 bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-lg transition-all duration-300 ease-in-out"
           onClick={resetFields}
         >
           Reset
