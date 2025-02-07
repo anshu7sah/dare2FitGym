@@ -116,10 +116,10 @@ const Navbar = () => {
             Pricing
           </Link>
           <Link
-            href="/community"
+            href="/calculator"
             className="hover:text-gray-500 transition-colors duration-300"
           >
-            Community
+            Calorie Calculator
           </Link>
         </div>
 
