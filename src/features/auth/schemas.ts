@@ -10,3 +10,9 @@ export const registerSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8, "Minimum 8 characters required"),
 });
+export interface IUser extends Document {
+  _id: string;
+  name: string;
+  email: string;
+  password: string;
+}

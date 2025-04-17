@@ -5,7 +5,7 @@ import personImage from "/public/hero/hero2.png"; // Replace this with the actua
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="bg-black text-white pt-16 min-h-screen"
+      className="bg-black text-white min-h-screen"
       //   style={{ height: "calc(100vh - 2.5rem)" }}
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-10 md:py-20">
