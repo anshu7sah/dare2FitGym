@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/header/Header";
 import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "sonner";
+import { getCurrent } from "@/features/auth/queries";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: "Dare2Fit gym and fitness center.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

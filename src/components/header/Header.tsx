@@ -4,8 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/logos/logo2.png";
 import name from "/public/logos/gymName.png";
+import { AuthenticatedUser } from "@/features/auth/queries";
+import { UserButton } from "@/features/auth/components/user-button";
+import { useCurrent } from "@/features/auth/api/use-current";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
+  const { data: userData } = useCurrent();
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -50,21 +55,27 @@ const Navbar = () => {
         </div>
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex space-x-4">
-          <button className="relative text-white border border-white px-4 py-2 rounded-md group overflow-hidden">
-            <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
-              Login
-            </span>
-            <div className="absolute -inset-0 w-full h-full bg-[#FAEE21] transform -translate-x-1/2 -translate-y-1/2 rotate-[60deg] origin-top-left transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0"></div>
-          </button>
+        {userData ? (
+          <div className="hidden md:flex space-x-4">
+            <UserButton />
+          </div>
+        ) : (
+          <div className="hidden md:flex space-x-4">
+            <button className="relative text-white border border-white px-4 py-2 rounded-md group overflow-hidden">
+              <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
+                Login
+              </span>
+              <div className="absolute -inset-0 w-full h-full bg-[#FAEE21] transform -translate-x-1/2 -translate-y-1/2 rotate-[60deg] origin-top-left transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0"></div>
+            </button>
 
-          <button className="relative bg-blue-400 text-white px-4 py-2 rounded-md group overflow-hidden">
-            <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
-              Register
-            </span>
-            <div className="absolute inset-0 w-full h-full bg-[#FAEE21] transform -translate-x-1/2 -translate-y-1/2 rotate-[60deg] origin-top-left transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0"></div>
-          </button>
-        </div>
+            <button className="relative bg-blue-400 text-white px-4 py-2 rounded-md group overflow-hidden">
+              <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
+                Register
+              </span>
+              <div className="absolute inset-0 w-full h-full bg-[#FAEE21] transform -translate-x-1/2 -translate-y-1/2 rotate-[60deg] origin-top-left transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0"></div>
+            </button>
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -124,6 +135,11 @@ const Navbar = () => {
         </div>
 
         {/* Authentication buttons for mobile */}
+        {/* {user ? (
+          <div className="flex justify-around p-6 mt-auto">
+            <UserButton />
+          </div>
+        ) : ( */}
         <div className="flex justify-around p-6 mt-auto">
           <button className="relative text-white border border-white px-4 py-2 rounded-md group overflow-hidden">
             <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
@@ -139,6 +155,7 @@ const Navbar = () => {
             <div className="absolute inset-0 w-full h-full bg-[#FAEE21] transform -translate-x-1/2 -translate-y-1/2 rotate-[60deg] origin-top-left transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0"></div>
           </button>
         </div>
+        {/* )} */}
       </div>
 
       {/* Overlay for mobile menu */}

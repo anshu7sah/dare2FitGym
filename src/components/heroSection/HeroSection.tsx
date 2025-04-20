@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import personImage from "/public/hero/hero2.png"; // Replace this with the actual path of your image
+import { AuthenticatedUser } from "@/features/auth/queries";
 
 const HeroSection: React.FC = () => {
   return (

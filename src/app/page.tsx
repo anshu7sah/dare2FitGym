@@ -3,7 +3,8 @@ import JoinUsSection from "@/components/JoinUsSection/JoinUsSection";
 import Package from "@/components/package/Package";
 import PhysicsTransform from "@/components/physicsTransform/PhysicsTransform";
 import SwiperComp from "@/components/swiper/SwiperComp";
-export default function Home() {
+
+export default async function Home() {
   return (
     <div>
       <HeroSection />
